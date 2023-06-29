@@ -1,38 +1,252 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+:root{
+    --bg-color: #13171C;
+    --card-bg-color: #24282C;
+    --light-green-color :#D3F36B;
+    --dark-grey-color: #24282C;
+    --logo-bg-color: #F9F9F5;
+    --light-grey-color: #838B8F;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--bg-color);
+    overflow-y: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+--webkit::-webkit-scrollbar{
+    display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App{
+    height: 100vh;
+    padding: 60px;
+    display: flex;
+    gap: 48px;
+    /* flex-wrap: wrap; */
 }
 
-.App-link {
-  color: #61dafb;
+/* ---------- USER CARD ---------- */
+
+.user{
+    height: 520px;  
+    width: 30%;
+    background-color: var(--card-bg-color);
+    padding: 1.2rem;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5.2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.user-info{
+    width: 302px;
+    height: 248px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.user-info img{
+    width: 176px;
+    height: 176px;
+}
+
+.user-name{
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    line-height: 32.78px;
+}
+
+.job-title{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--light-green-color);
+}
+
+.buttons{
+    width: 302px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.buttons button{
+    border: 1px solid white;
+    border-radius: 32px;
+    padding: 12px;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttons button img{
+    height: 18px;
+    width: 18px;
+}
+
+/* ------ APPS SECTION ---------- */
+.apps{
+    /* width: 946px; */
+    width: 70%;
+    height: 90vh;
+    color: white;
+    gap: 20px;
+}
+
+/* --------- NAVBAR ------------- */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--dark-grey-color);
+    padding: 0px 0px 16px 0px;
+    gap: 6px;
+}
+
+.navbar-head{
+    display: flex;
+    gap: 10px;
+    width: 594px;
+}
+
+.navbar-head span{
+    font-size: 24px;
+}
+
+.navbar-head img{
+    width: 32px;
+    height: 32px;
+}
+
+.search-bar{
+    padding: 0px 10px;
+    position: relative;
+    width: 300px;
+    height: 50px;
+    background-color: var(--dark-grey-color);
+    border-radius: 10px;
+    display: flex;
+}
+
+.search-bar img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    width: 18px;
+}
+  
+  .search-bar input {
+    padding: 8px 16px 8px 24px;
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+/* --------- APPS CATALOGUE -------- */
+.catalogue{
+    overflow-y: hidden;
+    padding: 20px 0px;
+    height: 800px;
+
+    /* max-height: 630px; */
+    /* background-color: blue; */
+}
+
+.scroller-div{
+    overflow-y: scroll;
+    max-height: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 0px;
+    justify-items: center;
+}
+
+.scroller-div::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+
+
+/* --------- APP CARD ----------- */
+.app-card{
+    width: 420px;
+    height: 100px;
+    display: flex;
+    border-radius: 20px;
+    padding: 10px 18px 10px 10px;
+    background-color: var(--card-bg-color);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container{
+    width: 130px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background-color: var(--logo-bg-color);
+    margin-right: 10px;
+}
+
+.app-info{
+    width: 220px;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.app-info > span:first-child{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.app-info .last-login{
+    font-size: 10px;
+    color: var(--light-grey-color);
+}
+
+@media screen and (max-width:400px){
+    .App{
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .user{
+        width: 100%;
+    }
+
+    .apps{
+        width: 100%;
+    }
+
+    .navbar{
+        flex-wrap: wrap;
+    }
+
+    .scroller-div{
+        grid-template-columns: repeat(1, 100%);
+        justify-items: self-start;
+    }
 }
