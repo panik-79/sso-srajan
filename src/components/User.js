@@ -3,7 +3,7 @@ import Avatar from '../images/Avatar.png'
 import Figrid from '../images/FiGrid.png'
 import Setting from '../images/FiSettings.png'
 import PowerOff from '../images/Vector.png'
-const User = () => {
+const User = ({currTab,setCurrTab}) => {
   return (
     <div className='user'>
         <div className="user-info">
@@ -14,13 +14,13 @@ const User = () => {
             <span className="job-title">Software Developer - Level 1</span>
         </div>
         <div className="buttons">
-            <button>
+            <button onClick={()=>{setCurrTab("All Apps")}}>
                 <img src={Figrid} alt="" />
-                <span>All Apps</span>
+                <span >All Apps</span>
             </button>
-            <button>
+            <button onClick={()=>{setCurrTab("Settings")}}>
                 <img src={Setting} alt="" />
-                <span>Settings</span>
+                <span >Settings</span>
             </button>
             <button>
                 <img src={PowerOff} alt="" />
