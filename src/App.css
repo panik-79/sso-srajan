@@ -24,6 +24,8 @@ body::-webkit-scrollbar{
     padding: 60px;
     display: flex;
     gap: 48px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 

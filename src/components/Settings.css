@@ -32,3 +32,27 @@ width:50%;
     margin-bottom: 0px;
     margin-top: 0px;
 }
+.upload-profile-pic{
+    display: flex;
+padding: 10px 18px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border-radius: 10px;
+background: #D3F36B;
+height: 10%;
+margin-top: 8%;
+cursor: pointer;
+}
+.avatar{
+display: flex;
+width: 72px;
+height: 72px;
+align-items: flex-start;
+border-radius: 60px;
+}
+.pic-change{
+    display: flex;
+    justify-content: space-between;
+    width: 32%;
+}
